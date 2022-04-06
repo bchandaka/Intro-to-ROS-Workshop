@@ -14,7 +14,7 @@ Instead of using ros locally, we can use a browser version with everything pre-i
 1. `roslaunch turtlebot_gazebo turtlebot_project.launch`
 2. `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`
 3. Move around the turtlebot with your keyboard!
-   - try visualizing some of the sensor dat with `rviz` too
+   - try visualizing some of the sensor data with `rviz` too
 
 ## Additional Commands
 _Tab Completion and `-h` flag are your friends_
