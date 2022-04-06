@@ -1,0 +1,24 @@
+<launch>
+
+  <param name="/use_sim_time" value="true"/>
+
+  <node
+    name="play" 
+    pkg="rosbag" 
+    type="play" 
+    args="$(find vision_demo)/data/sim_gem_moving.bag
+            /gem/velodyne_points:=/cloud 
+            /gem/front_single_camera/camera_info:=/camera_info
+            /gem/front_single_camera/image_raw:=/rgb
+            /tf_static:=/tf
+            --delay=5 --clock"
+  />
+
+  <node 
+    name="vision_cv2_demo" 
+    pkg="vision_demo" 
+    type="vision_main.py" 
+    output="screen"
+  />
+
+</launch>
